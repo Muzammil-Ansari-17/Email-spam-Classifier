@@ -1,7 +1,6 @@
 import streamlit as st
 import pickle
 
-from nltk import probability
 
 tfidf = pickle.load(open('vectorizer.pkl','rb'))
 model = pickle.load(open('Model.pkl','rb'))
