@@ -1,46 +1,38 @@
 import streamlit as st
 import pickle
+from preprocess import transform_text
 
+tfidf = pickle.load(open("vectorizer.pkl", "rb"))
+model = pickle.load(open("Model.pkl", "rb"))
 
-tfidf = pickle.load(open('vectorizer.pkl','rb'))
-model = pickle.load(open('Model.pkl','rb'))
+st.title("📧 Email & SMS Spam Classifier")
 
-st.title("Email & SMS Spam Classifier")
-
-
-input_sms = st.text_area("Enter the message ", height= 350)
-
-st.markdown("---")
-
-st.caption("Developed by Muzammil Ahmed")
-
-st.dialog("write the sms")
+input_sms = st.text_area(
+    "Enter the message",
+    placeholder="Type or paste your Email/SMS here...",
+    height=350
+)
 
 if st.button("Predict", use_container_width=True):
 
+    if not input_sms.strip():
+        st.warning("⚠ Please enter an Email or SMS message.")
+        st.stop()
 
-    # 1. preprocess
-    from preprocess import transform_text
     transform_sms = transform_text(input_sms)
-
-    #  2. vectorize
-
     vector_input = tfidf.transform([transform_sms])
-
-    #  3. predict
 
     result = model.predict(vector_input)[0]
     prob = model.predict_proba(vector_input)[0]
-
-    #  4. Display
+    confidence = prob[result] * 100
 
     if result == 1:
         st.error("Spam Message")
-        st.write(f"Confidence : {prob[1] * 100:.2f} %")
     else:
         st.success("Not Spam")
-        st.write(f"Confidence :  {prob[0] * 100:.2f} %")
 
+    st.progress(confidence / 100)
+    st.write(f"**Confidence:** {confidence:.2f}%")
 
-
-print(type(model))
+st.markdown("---")
+st.caption("Developed by Muzammil Ahmed")
