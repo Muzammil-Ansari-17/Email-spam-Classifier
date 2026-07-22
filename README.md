@@ -54,7 +54,7 @@ Email-spam-Classifier/
 7. The trained Multinomial Naive Bayes model predicts whether the message is **Spam** or **Not Spam**.
 
 
-![Uploading image.png…]()
+<img width="1669" height="883" alt="image" src="https://github.com/user-attachments/assets/14ad8fe0-0778-4f5f-be4a-70983f6bb81f" />
 
 
 
