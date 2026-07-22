@@ -10,6 +10,10 @@ st.title("Email & SMS Spam Classifier")
 
 input_sms = st.text_area("Enter the message ", height= 350)
 
+st.markdown("---")
+
+st.caption("Developed by Muzammil Ahmed")
+
 st.dialog("write the sms")
 
 if st.button("Predict", use_container_width=True):
