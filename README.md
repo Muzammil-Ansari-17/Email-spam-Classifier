@@ -53,6 +53,11 @@ Email-spam-Classifier/
 6. The cleaned text is transformed using the trained TF-IDF Vectorizer.
 7. The trained Multinomial Naive Bayes model predicts whether the message is **Spam** or **Not Spam**.
 
+
+![Uploading image.png…]()
+
+
+
 ---
 
 ## ⚙️ Installation
