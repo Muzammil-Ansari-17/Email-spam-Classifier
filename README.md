@@ -4,6 +4,13 @@ A Machine Learning web application that classifies Email and SMS messages as **S
 
 ---
 
+## 🌐 Live Demo
+
+🚀 **Try the application here:**  
+[https://your-app-name.streamlit.app](https://email-spam-classifier-awbz6tkjlv5cadp5y8qsu5.streamlit.app/)
+
+
+---
 ## 🚀 Features
 
 * Detects whether an Email or SMS is **Spam** or **Not Spam**
