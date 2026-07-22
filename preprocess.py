@@ -39,8 +39,3 @@ def transform_text(text):
 
     return " ".join(y)
 
-
-# Testing the method or function
-
-output = transform_text("Hi, I'm Muzammil, and you're looking at code I wrote on 21 July 2026 at 5:03 PM.")
-print(output)
