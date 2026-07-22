@@ -4,6 +4,13 @@ A Machine Learning web application that classifies Email and SMS messages as **S
 
 ---
 
+## 🌐 Live Demo
+
+🚀 **Try the application here:**  
+[https://your-app-name.streamlit.app](https://email-spam-classifier-awbz6tkjlv5cadp5y8qsu5.streamlit.app/)
+
+
+---
 ## 🚀 Features
 
 * Detects whether an Email or SMS is **Spam** or **Not Spam**
@@ -54,7 +61,7 @@ Email-spam-Classifier/
 7. The trained Multinomial Naive Bayes model predicts whether the message is **Spam** or **Not Spam**.
 
 
-![Uploading image.png…]()
+<img width="1669" height="883" alt="image" src="https://github.com/user-attachments/assets/14ad8fe0-0778-4f5f-be4a-70983f6bb81f" />
 
 
 
